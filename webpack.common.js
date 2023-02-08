@@ -13,6 +13,7 @@ module.exports = {
             template: "./src/template.html"
         })
     ],
+    devtool:'inline-source-map',
     devServer:{
         static:path.resolve(__dirname,'dist'),
         open:true,
@@ -30,6 +31,10 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg)$/i,
                 type:'asset/resource'
+            },
+            {
+                test:/\.(html|htm)$/i,
+                use:["html-loader"],
             }
         ]
     }
