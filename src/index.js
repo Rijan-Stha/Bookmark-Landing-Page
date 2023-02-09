@@ -10,5 +10,6 @@ const root = document.getElementById('root');
 root.append(
     module1.nav(),
     module2.hom(),
-    module3.features()
+    module3.features(),
+    module4.default()
 )

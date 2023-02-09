@@ -15,7 +15,9 @@ function features() {
                                 devices so you can access then on the go."
   features__info.classList.add("section__info", "section__info--features");
 
-  features.append(features__title, features__info, tab());
+  features.append(features__title, 
+              features__info, 
+              tab());
   return features;
 }
 

@@ -56,7 +56,7 @@ export default function tab() {
   bg.classList.add('bg-features');
   tabContent.append(tabContent__image, tabContent__info,bg);
 
-  let tabSwitchingModule = (function(){
+  (function(){
     tabs.childNodes.forEach(item=>{
       item.onclick= (e) =>{
 
@@ -88,8 +88,6 @@ export default function tab() {
   })();
 
   tabContainer.append(tabs, tabContent);
-
-  work(document.getElementsByClassName('tabs__tab'));
 
   return tabContainer;
 }

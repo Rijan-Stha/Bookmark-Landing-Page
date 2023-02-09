@@ -59,3 +59,19 @@ h1{
         font-size: 1.2rem;
     }
 }
+
+button{
+    margin-top:2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border:none;
+    padding:.6rem 1.5rem;
+    background-color: var(--primary-blue);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px var(--primary-blue);
+    transition: scale 100ms ease-in;
+}
+
+button:hover{
+    scale:1.1;
+}
