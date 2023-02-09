@@ -4,9 +4,10 @@ import Firefox from "./logo-firefox.svg";
 import Opera from "./logo-opera.svg";
 import Dots from "./bg-dots.svg";
 
-export default function service(){
+export function service(){
 
     const service = document.createElement('section');
+    service.classList.add('service','flow');
     
     const service__title = document.createElement('h1');
     service__title.classList.add('section__title','section__title--service');
@@ -28,7 +29,7 @@ export default function service(){
 
     const chromeImg = new Image();
     chromeImg.src = Chrome;
-    console.log(chromeImg);
+    chromeImg.classList.add('browser');
 
     const chromeh3 = document.createElement('h3');
     chromeh3.textContent = 'Add to Chrome';
@@ -38,6 +39,7 @@ export default function service(){
 
     const dot = new Image();
     dot.src = Dots;
+    dot.classList.add('dot');
 
     const chromeButton = document.createElement('button');
     chromeButton.textContent = "Add & Install Extension";
@@ -56,6 +58,7 @@ export default function service(){
 
     const FirefoxImg = new Image();
     FirefoxImg.src = Firefox;
+    chromeImg.classList.add('browser');
 
     const Firefoxh3 = document.createElement('h3');
     Firefoxh3.textContent = 'Add to Firefox';
@@ -83,6 +86,7 @@ export default function service(){
 
     const OperaImg = new Image();
     OperaImg.src = Opera;
+    chromeImg.classList.add('browser');
 
     const Operah3 = document.createElement('h3');
     Operah3.textContent = 'Add to Opera';
@@ -117,6 +121,5 @@ export default function service(){
         cards
     );
 
-    console.log(service);
-    document.body.appendChild(service);
+   return service;
 }
