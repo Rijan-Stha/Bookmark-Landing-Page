@@ -18,8 +18,8 @@ const nav = () =>{
     nav.innerHTML = 
             `
             <ul class="nav__list" data-mobile-visible="false">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#">Contact</a></li>
                 <li id="login"><a href="#" >Login</a></li>
             </ul>
