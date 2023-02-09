@@ -1,9 +1,12 @@
 import "../../styles/features.css";
+import "../reveal";
 import tab from "./tab";
 
 function features() {
+
   const features = document.createElement("section");
-  features.classList.add('features', 'flow');
+  features.classList.add('features', 'flow','reveal');
+  features.setAttribute('id','features');
 
   const features__title = document.createElement("h1");
   features__title.classList.add("section__title", "section__title--features");

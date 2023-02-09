@@ -7,6 +7,7 @@ const nav = () =>{
     const logo = document.createElement('div');
     const nav = document.createElement('div');
     nav.setAttribute('role','navigation');
+    nav.setAttribute('id','home');
     console.log(nav)
 
     logo.classList.add('logo');

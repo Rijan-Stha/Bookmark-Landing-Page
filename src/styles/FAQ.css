@@ -1,0 +1,8 @@
+.faq{
+    max-width: 900px;
+    margin:0 auto;
+    margin-top:6rem;
+    text-align: center;
+    transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+

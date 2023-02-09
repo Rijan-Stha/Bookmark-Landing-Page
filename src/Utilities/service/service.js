@@ -3,11 +3,13 @@ import Chrome from "./logo-chrome.svg";
 import Firefox from "./logo-firefox.svg";
 import Opera from "./logo-opera.svg";
 import Dots from "./bg-dots.svg";
+import "../reveal";
 
 export function service(){
 
     const service = document.createElement('section');
     service.classList.add('service','flow');
+    service.setAttribute('id','pricing');
     
     const service__title = document.createElement('h1');
     service__title.classList.add('section__title','section__title--service');
@@ -22,7 +24,7 @@ export function service(){
 
 
     const cards = document.createElement('div');
-    cards.classList.add('cards');
+    cards.classList.add('cards','reveal');
 
     const service__card1 = document.createElement('div');
     service__card1.classList.add('service__card');

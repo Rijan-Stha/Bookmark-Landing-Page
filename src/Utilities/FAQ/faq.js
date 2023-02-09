@@ -1,4 +1,4 @@
-import '../../styles/faq.css';
+import '../../styles/FAQ.css';
 import {accordion} from "./accordion"
 
 export function faq(){

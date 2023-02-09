@@ -1,3 +1,5 @@
+import "./accordion.css";
+import "../reveal"
 
 const accordion =()=>{
     const accContainer = document.createElement('div');
@@ -32,7 +34,8 @@ const accordion =()=>{
 
 function makeAcc(head,info){
     const cont = document.createElement('div');
-
+    cont.classList.add('cont','reveal');
+    
     const acc = document.createElement('div');
     acc.setAttribute('aria-expanded',false);
     acc.textContent = head;
@@ -41,21 +44,16 @@ function makeAcc(head,info){
     const acc__info = document.createElement('div');
     acc__info.textContent = info;
     acc__info.classList.add('head_info');
-    acc__info.style.maxWidth = 0;
-    acc__info.style.display = "none";
 
-    acc.onclick = () =>{
+    acc.onclick = () =>{ 
         if(acc.getAttribute('aria-expanded')==="false"){
-            acc__info.style.maxWidth = "none";
-            acc__info.style.display = "block";
             acc.setAttribute('aria-expanded',true);
+            cont.classList.add('acc-active');  
         }else{
-            acc__info.style.maxWidth = 0;
-            acc__info.style.display = "none";
             acc.setAttribute('aria-expanded',false);
+            cont.classList.remove('acc-active');
         }
     }
-
     cont.append(acc,acc__info);
     console.log(acc);
     
