@@ -1,5 +1,4 @@
 import "./tab.css";
-import {work} from './tab-work';
 import Tab1 from "./illustration-features-tab-1.svg";
 import Tab2 from "./illustration-features-tab-2.svg";
 import Tab3 from "./illustration-features-tab-3.svg";
@@ -13,7 +12,7 @@ export default function tab() {
   
   const tab1 = document.createElement("div");
   tab1.textContent = "Simple Bookmarking";
-  tab1.classList.add("tabs__tab", "tabs__tab--tab1","active");
+  tab1.classList.add("tabs__tab", "tabs__tab--tab1");
   tab1.setAttribute("aria-expanded", true);
 
   const tab2 = document.createElement("div");
@@ -52,12 +51,41 @@ export default function tab() {
     tabContent__info__subtitle,
     tabContent__info__button
   );
+
   const bg = document.createElement('div');
   bg.classList.add('bg-features');
   tabContent.append(tabContent__image, tabContent__info,bg);
 
-  let tb = document.getElementsByClassName('tabs__tab');
-  console.log(tb.length)
+  let tabSwitchingModule = (function(){
+    tabs.childNodes.forEach(item=>{
+      item.onclick= (e) =>{
+
+        tabs
+          .querySelectorAll('[aria-expanded="true"]')
+          .forEach((tab) => tab
+          .setAttribute('aria-expanded',false));
+
+
+        e.target.setAttribute('aria-expanded',true);
+        if(e.target === tab1){
+          tabContent__image.src = Tab1;
+          tabContent__info__title.textContent = "  Bookmark in one click";
+          tabContent__info__subtitle.textContent = `Organize your bookmarks however you like. Our simple drag-and-drop interface                       
+                         gives you complete control over how you manage your favourite sites.`;
+        }else if(e.target === tab2){
+          tabContent__image.src = Tab2;
+          tabContent__info__title.textContent = "Speedy Searching";
+          tabContent__info__subtitle.textContent = `Organize your bookmarks however you like. Our simple drag-and-drop interface          
+                                   gives you complete control over how you manage your favourite sites.`;
+        }else if(e.target === tab3){
+          tabContent__image.src = Tab3;
+      tabContent__info__title.textContent = "Easy Sharing";
+      tabContent__info__subtitle.textContent = `Organize your bookmarks however you like. Our simple drag-and-drop interface   
+                                      gives you complete control over how you manage your favourite sites.`;
+        }
+      }                               
+    });
+  })();
 
   tabContainer.append(tabs, tabContent);
 

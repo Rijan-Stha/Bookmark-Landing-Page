@@ -18,7 +18,7 @@
     border-bottom: 1.6px solid var(--neutral-gray);
 }
 
-.tabs .active::after{
+.tabs [aria-expanded="true"]::after{
     content: '';
     position: absolute;
     left:50%;
@@ -75,7 +75,7 @@
     .tabs div, .tabs div:last-child{
         border:none;
     }
-    .tabs .active::after{
+    .tabs [aria-expanded="true"]::after{
        width: 100%;
     }
 }
